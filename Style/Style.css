@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Flame";
+  src: url(./Assets/Flame-Font/FlameRegular.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-bg: #f8f1e7;
+  --Text-color: #502314;
+  --Pickup-btn-bg: #a71b00;
+  --Delivery-btn-bg: #dfd2c8;
+  --address-text: #d62300;
+  --Login-btn: #d62300;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+  background-color: var(--body-bg);
+  font-family: "Flame";
+  text-decoration: none;
+  color: var(--Text-color);
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+}
+.navbar {
+    padding: 15px 80px 15px 80px ;
+    background-color: pink;
+    font-size: 2rem;
+    cursor: pointer;
+ 
+
+}
+/* #Menu {
+    cursor: pointer;
+} */
+.Logo h2 {
+    /* cursor: pointer; */
+   font-weight: 800;
+
+}
+.Profile {
+    gap: 40px;
+}
+.Profile .View-btn button {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0px !important;
+}
+/* hr {
+    background-color: rgba(244, 5, 5, 0.102);
+} */
+
+/* Hidden footer */
+.Hidden-navbar {
+    
+}

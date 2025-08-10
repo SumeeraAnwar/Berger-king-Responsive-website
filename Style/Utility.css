@@ -3,31 +3,31 @@
 .d-flex{
     display: flex;
 }
-.justify-center{
+.j-center{
     justify-content: center;
 }
-.justify-between{
+.j-between{
     justify-content: space-between;
 }
-.justify-around{
+.j-around{
     justify-content: space-around;
 }
-.justify-evenly{
+.j-evenly{
     justify-content: space-evenly;
 }
-.align-center{
+.A-center{
     align-items: center;
 }
-.align-between{
+.A-between{
     align-items: space-between;
 }
-.align-around{
+.A-around{
     align-items: space-around;
 }
-.align-evenly{
+.A-evenly{
     align-items: space-evenly;
 }
-.wrap{
+.Wrap{
     flex-wrap: wrap;
 }
 .flex-column{
@@ -35,6 +35,9 @@
 }
 .flex-row{
     flex-direction: row;
+}
+.Pad {
+    padding: 20px;
 }
 
 /* flex classes end */
@@ -46,6 +49,6 @@
 .Grid {
     display: Grid;
 }
-.G-Temp-Col {
+/* .G-Temp-Col {
     grid-template-columns: ;
-}
+} */
