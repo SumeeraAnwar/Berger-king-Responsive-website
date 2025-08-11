@@ -42,7 +42,15 @@
 
 /* flex classes end */
 
-
+.mar {
+    margin: 15px;
+}
+.pad {
+    padding: 20px;
+}
+.M-auto {
+    margin: auto;
+}
 
 
 /* Grid Start */
