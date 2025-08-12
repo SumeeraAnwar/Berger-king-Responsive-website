@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Flame";
-  src: url(./Assets/Flame-Font/FlameRegular.otf);
+  src: url(../Assets/Flame-Font/Flame-Regular.woff);
 }
 * {
   padding: 0;
@@ -9,16 +9,16 @@
 }
 :root {
   --body-bg: #f8f1e7;
-  --white : #ffffff;
+  --white: #ffffff;
   --Text-color: #502314;
   --Pickup-btn-bg: #a71b00;
   --Delivery-btn-bg: #dfd2c8;
   --address-text: #d62300;
-  --Login-btn-bg :#d62300;
-  --B-Bottom :#bba391;
+  --Login-btn-bg: #d62300;
+  --B-Bottom: #bba391;
 }
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 body {
   background-color: var(--body-bg);
@@ -28,172 +28,257 @@ body {
   list-style: none;
   /* height: 200vh; */
 }
+body a {
+  text-decoration: none;
+}
+body li {
+  list-style: none;
+}
 header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
 }
 .navbar {
-    padding: 15px 80px 15px 80px ;
-    background-color: pink;
-    font-size: 2rem;
-    cursor: pointer;
- 
-
+  padding: 15px 80px 15px 80px;
+  background-color: var(--body-bg);
+  font-size: 2rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--B-Bottom);
 }
-/* #Menu {
-    cursor: pointer;
-} */
+#Menu a i {
+  cursor: pointer;
+  color: var(--Text-color);
+}
 .Logo h2 {
-    /* cursor: pointer; */
-   font-weight: 800;
-
+  /* cursor: pointer; */
+  font-weight: 800;
 }
 .Profile {
-    gap: 40px;
+  gap: 40px;
 }
 .Profile .View-btn button {
-    padding: 10px;
-    border-radius: 20px;
-    margin: 0px !important;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0px !important;
+}
+/* for a small screen */
+@media screen and (max-width: 960px) {
+  header {
+    display: none;
+  }
+  .Grids-card {
+    display: grid;
+    /* grid-template-columns: minmax(995px, 8fr); */
+    grid-area: 2 /  span 6;
+    gap: 50px;
+
+    .item1 {
+      grid-area: 2 / span 6;
+    }
+    .item2 {
+      grid-area: 1 / span 6;
+    }
+    .item3 {
+      grid-area: 3 / span 6;
+    }
+    .item4 {
+      grid-area: 4 / span 6;
+    }
+    .item5 {
+      grid-area: 5 / span 6;
+    }
+  }
+  .Grids-card .First-card h2 {
+    display: none;
+  }
+  .Grids-card .Second-card img {
+    width: 100%;
+  }
 }
 
-/* @media screen and (max-width:960px){
-        header .Logo h2 {
-            text-align: right;
-            display: flex;
-            justify-content: flex-start;
-            color: green;
-            
-        }
-}  */
-    
+/* 2nd Navbar after Responsive */
+.Container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.side-Navbar {
+  padding: 15px 80px 15px 80px;
+  background-color: var(--body-bg);
+  font-size: 2rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--B-Bottom);
+  /* color: var(--Text-color); */
+  /* text-decoration: none; */
+}
+.side-Navbar #menu a {
+  color: var(--Text-color);
+}
+#menu .Heading {
+  font-weight: 800;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.Profile a {
+  color: var(--Text-color);
+}
 
-/* hr {
-    background-color: rgba(244, 5, 5, 0.102);
-} */
-
-/* Hidden footer */
-.Hidden-navbar {
-    width: 70%;
-    /* border: 2px solid green; */
-    padding: 10px;
-    height: 380vh;
-    /* background-color: #F8F1E7; */
-    border-right: 1px solid var(--B-Bottom);
+@media screen and (min-width: 961px) {
+  .Container {
     display: none;
+  }
+}
+
+/* Hidden navbar */
+.Hidden-navbar {
+  width: 70%;
+  padding: 10px;
+  height: 380vh;
+  border-right: 1px solid var(--B-Bottom);
+  display: none;
 }
 .Hidden-navbar h1 {
-    font-size: 3.5rem;
-    line-height: 20px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 30px;
+  font-size: 3.5rem;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
 }
 .Hidden-navbar img {
-    width: 270px;
-    /* height: 150px; */
-    margin: auto;
-    margin-left: 295px;
-    /* font-size: 5rem; */
+  width: 270px;
+  /* height: 150px; */
+  margin: auto;
+  margin-left: 295px;
+  /* font-size: 5rem; */
 }
 .Hidden-navbar .Login-btn button {
-    margin-left: 323px;
-    width: 224px;
-    height: 48px;
-    /* padding: 16px; */
-    border-radius: 25px;
-    padding: 8px 16px;
-    /* margin: auto; */
-    font-size: 1.6rem;
-    /* font-family: "Flame"; */
-    color: var(--white);
-    border: 1px solid var(--Login-btn-bg);
-    background-color: var(--Login-btn-bg);
-    margin-top: 25px;
-    cursor: pointer;
+  margin-left: 323px;
+  width: 224px;
+  height: 48px;
+  /* padding: 16px; */
+  border-radius: 25px;
+  padding: 8px 16px;
+  /* margin: auto; */
+  font-size: 1.6rem;
+  /* font-family: "Flame"; */
+  color: var(--white);
+  border: 1px solid var(--Login-btn-bg);
+  background-color: var(--Login-btn-bg);
+  margin-top: 25px;
+  cursor: pointer;
 }
 .Hidden-navbar address {
-    text-align: center;
-    color: var(--address-text);
-    /* color: #d62300; */
-    line-height: 24px;
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-top: 25px;
+  text-align: center;
+  color: var(--address-text);
+  /* color: #d62300; */
+  line-height: 24px;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-top: 25px;
 }
 
 .List-heading {
-    width: 98.5%;
-    /* border: 2px solid green; */
+  width: 98.5%;
+  /* border: 2px solid green; */
 }
 .Nav-list .List-heading h2 {
-    color: var(--Text-color);
-    /* color: green; */
-    font-size: 2.5rem;
-    /* border: 2px solid green; */
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--B-Bottom);
-    padding: 10px 10px 10px 10px;
-    margin-left: 10px;
+  color: var(--Text-color);
+  /* color: green; */
+  font-size: 2.5rem;
+  /* border: 2px solid green; */
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--B-Bottom);
+  padding: 10px 10px 10px 10px;
+  margin-left: 10px;
 }
-
 
 .Hidden-navbar .Nav-list {
-    /* border: 2px solid green; */
-    width: 100%;
-    padding: 20px;
-        height: 100vh;
-
+  /* border: 2px solid green; */
+  width: 100%;
+  padding: 20px;
+  height: 100vh;
 }
-/* .Nav-items {
-    margin: 20px;
-} */
-/* .Nav-list .Nav-items h2 {
-    font-size: 2.5rem;
-    line-height: 20px;
-    margin-top: 20px;
-    padding: 20px;
-
-} */
-
 .Nav-list li {
-    list-style: none;
-    /* border: 2px solid green; */
-    width: 100%;
-    
+  list-style: none;
+  /* border: 2px solid green; */
+  width: 100%;
 }
 .Nav-list a {
-    text-decoration: none;
-    color: var(--Text-color);
-    font-size: 1.6rem;
-    line-height: 24px;
-    border-bottom: 1px solid var(--B-Bottom);
-    padding: 10px;
-    margin: 10px !important;
-    width: 100%;
-        /* border-bottom: var(--B-Bottom); */
+  text-decoration: none;
+  color: var(--Text-color);
+  font-size: 1.6rem;
+  line-height: 24px;
+  border-bottom: 1px solid var(--B-Bottom);
+  padding: 10px;
+  margin: 10px !important;
+  width: 100%;
 }
 .Nav-list i {
-    float: right;
+  float: right;
 }
 
+/* Hero page start */
+.Grids-card {
+  display: grid;
+  grid-template-areas: 'Heading Image';
+  grid-template-columns: 2fr 4fr;
+  gap: 10px;
+  padding: 25px;
+  background-color: var(--body-bg);
+}
 
-/* @media screen and(max-width:960px ) {
-    .Hidden-navbar {
-        display: none;
-    }
-    
-} */
+.Grids-card .First-card h2 {
+  color: var(black);
+  font-size: 6rem !important;
+  line-height: 1.155em;
+  font-family: "Flame";
+  margin-top: 25px;
+  letter-spacing: 1.2;
+  font-weight: bold;
+  grid-area: "Heading";
+}
+.Order-Pickup {
+  color: var(--white);
+  background-color: var(--address-text);
+  padding: 20px 22px;
+  border: 1px solid var(--address-text);
+  border-radius: 30px;
+  margin-top: 20px;
+  /* padding: 25px; */
+  /* padding-top: ; */
+  width: 280px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.Order-Pickup:hover {
+  background-color: var(--Pickup-btn-bg);
+}
+.Order-Delivery {
+  color: var(--Text-color);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 0 !important;
+  padding: 20px 22px;
+  border: 1px solid var(--Text-color);
+  border-radius: 30px;
+  /* padding: 25px; */
+  /* padding-top: ; */
+  width: 280px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.Order-Delivery:hover {
+  background-color: var(--Delivery-btn-bg);
+}
 
-
-
-
-
-
-
-
-
-
+.Grids-card .Second-card img {
+  width: 100%;
+  height: 100%;
+  grid-area: 'Image';
+}
+@media screen {
+}
